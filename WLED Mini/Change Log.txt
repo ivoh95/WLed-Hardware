@@ -1,0 +1,5 @@
+v0.91
+Initial version for testing
+
+v0.92
+added reverse polarity protection diode for the d1 mini, leds are not reverse polarity protected.
