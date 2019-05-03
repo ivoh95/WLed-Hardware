@@ -1,0 +1,19 @@
+Jumper settings :
+
+Bypass Regulator: If you are using a 5v power supply and 5v addressable LEDs you will need to bridge this jumper, this will connect the wemos d1 mini 5v pin directly to the input voltage pin. Otherwise you will need a voltage regulator which will lower the voltage to 5v for the d1 mini.
+Leds will always get voltage directly from your power supply, so you must match your led voltage to your power supply voltage. 
+
+i2c pullup voltage: The board has options for i2c pullup resistors, this selscts if they pull up to 3.3v (which is officailly supported by the esp8266) or 5v (not officially supported, but some claims works fine and may be needed for some devices) ONLY BRIDGE ONE!
+
+DMA SEL: this selects what connects to the input of the builtin LED (if you want that to be your first led in the chain) or directly to the pin on the header. 
+
+UART SEL: this selects what connects to the input of the builtin LED (if you want that to be your first led in the chain) or directly to the pin on the header. 
+
+Built-In LED OUTPUT : connects the output pin of the builtin led to an output pin on the header, USE ONLY ONE!
+
+
+NOTE: ONLY CONNECT ONE LED OUTPUT TO THE BUILTIN LED AT A TIME AND CONNECT THE BUILT-IN LEDS OUTPUT TO THE SAME OUTPUT ON THE HEADER. 
+
+
+If you have no built in led : bridge both dma and uart sel to direct output and dont bridge anything on the built-in led output
+If you have a built in led on the uart line (typically) : bridge uart sel to builtin led, bridge dma sel to direct output, and bridge Built-in led output to uart. 
