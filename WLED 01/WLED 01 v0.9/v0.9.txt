@@ -1,1 +1,2 @@
 Initial version
+IR receiver does not seem to work with the pin its on, will be changed or removed in next revision. 
